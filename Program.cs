@@ -54,13 +54,24 @@ namespace Number_app
                     Console.ForegroundColor = ConsoleColor.Red;
 
 
-                    // Write app info
+                    // Tell user the wrong number
                     Console.WriteLine("Wrong number, please try again");
 
                     //Reset text color
                     Console.ResetColor();
                 }
             }
+
+            // Output success message
+            // Change text color
+            Console.ForegroundColor = ConsoleColor.Yellow;
+
+
+            // Write app info
+            Console.WriteLine("You are CORRECT!!!!");
+
+            //Reset text color
+            Console.ResetColor();
         }
     }
 }
