@@ -10,15 +10,6 @@ namespace Number_app
 
             GreetUser(); //Ask user for name and greet
 
-            // Ask users name
-            Console.WriteLine("What is your name?");
-
-            // Get user input
-            string inputName = Console.ReadLine();
-
-            Console.WriteLine("Hello {0}, let's play a game...", inputName);
-
-
             while (true)
             {
                 // Create a new random object
@@ -42,7 +33,8 @@ namespace Number_app
                     // Make sure user enters number
                     if (!int.TryParse(input, out guess))
                     {
-                        
+                        // Print error message
+                        PrintColorMessage(ConsoleColor.Red, "Please use a number");
 
                         //Keep going
                         continue;
@@ -54,28 +46,13 @@ namespace Number_app
                     // Match guess to correct number
                     if (guess != correctNumber)
                     {
-                        // Change text color
-                        Console.ForegroundColor = ConsoleColor.Red;
-
-
-                        // Tell user the wrong number
-                        Console.WriteLine("Wrong number, please try again");
-
-                        //Reset text color
-                        Console.ResetColor();
+                        // Print error message
+                        PrintColorMessage(ConsoleColor.Red, "Wrong number, please try again");
                     }
                 }
 
-                // Output success message
-                // Change text color
-                Console.ForegroundColor = ConsoleColor.Yellow;
-
-
-                // Write app info
-                Console.WriteLine("You are CORRECT!!!!");
-
-                //Reset text color
-                Console.ResetColor();
+                // Print Success message
+                PrintColorMessage(ConsoleColor.Yellow, "You are CORRECT!!!!");
 
                 // Ask to play again
                 Console.WriteLine("Play Again? [Y or N]");
