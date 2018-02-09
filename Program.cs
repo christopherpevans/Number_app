@@ -30,8 +30,10 @@ namespace Number_app
 
             Console.WriteLine("Hello {0}, let's play a game...", inputName);
 
-            // Set correct number
-            int correctNumber = 7;
+            // Create a new random object
+            Random random = new Random();
+
+            int correctNumber = random.Next(1, 11);
 
             // Set guess var
             int guess = 0;
