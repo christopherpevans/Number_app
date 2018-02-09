@@ -121,7 +121,7 @@ namespace Number_app
 
             // Reset text color
             Console.ResetColor();
-
+        }
             //Ask user name and greet
             static void GreetUser()
             {
@@ -133,6 +133,6 @@ namespace Number_app
 
                 Console.WriteLine("Hello {0}, let's play a game...", inputName);
             }
-        }
+        
     }
 }
