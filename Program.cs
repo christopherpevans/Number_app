@@ -6,21 +6,9 @@ namespace Number_app
     {
         static void Main(string[] args)
         {
+            GetAppInfo(); //Run GetAppInfo
 
-            // Set app vars
-            string appName = "Number Guesser";
-            string appVersion = "1.0.0";
-            string appAuthor = "Princeton Evans";
-
-            // Change text color
-            Console.ForegroundColor = ConsoleColor.Green;
-
-
-            // Write app info
-            Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
-
-            //Reset text color
-            Console.ResetColor();
+            GreetUser(); //Ask user for name and greet
 
             // Ask users name
             Console.WriteLine("What is your name?");
@@ -96,6 +84,54 @@ namespace Number_app
 
                 //Reset text color
                 Console.ResetColor();
+
+                // Ask to play again
+                Console.WriteLine("Play Again? [Y or N]");
+
+                // Get Answer
+                string answer = Console.ReadLine().ToUpper();
+
+                if (answer == "Y")
+                {
+                    continue;
+                }
+                else if (answer == "N")
+                {
+                    return;
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+
+        //Display App info
+        static void GetAppInfo()
+        {
+            // Set app vars
+            string appName = "Number Guesser";
+            string appVersion = "1.0.0";
+            string appAuthor = "Princeton Evans";
+
+            // Change text color
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
+            // Start Here
+
+            // Reset text color
+            Console.ResetColor();
+
+            //Ask user name and greet
+            static void GreetUser()
+            {
+                // Ask users name
+                Console.WriteLine("What is your name?");
+
+                // Get user input
+                string inputName = Console.ReadLine();
+
+                Console.WriteLine("Hello {0}, let's play a game...", inputName);
             }
         }
     }
