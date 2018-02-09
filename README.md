@@ -5,3 +5,7 @@ This is a terminal guessing game
 2. Guess a number between 1 and 10
 3. If you get the number correct, you can choose to play again.
 
+##Built With
+Visual Studio
+C#
+.Net Framework
