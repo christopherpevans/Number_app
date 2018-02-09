@@ -42,15 +42,7 @@ namespace Number_app
                     // Make sure user enters number
                     if (!int.TryParse(input, out guess))
                     {
-                        // Change text color
-                        Console.ForegroundColor = ConsoleColor.Red;
-
-
-                        // Tell user the wrong number
-                        Console.WriteLine("Please enter a number");
-
-                        //Reset text color
-                        Console.ResetColor();
+                        
 
                         //Keep going
                         continue;
@@ -134,6 +126,18 @@ namespace Number_app
 
                 Console.WriteLine("Hello {0}, let's play a game...", inputName);
             }
-        
+        // Print color message
+        static void PrintColorMessage(ConsoleColor color, string message)
+        {
+            // Change text color
+            Console.ForegroundColor = color;
+
+            // Tell user input must be number
+            Console.WriteLine(message);
+            // Start Here
+
+            // Reset text color
+            Console.ResetColor();
+        }
     }
 }
