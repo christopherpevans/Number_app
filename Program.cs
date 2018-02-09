@@ -122,6 +122,7 @@ namespace Number_app
             // Reset text color
             Console.ResetColor();
         }
+
             //Ask user name and greet
             static void GreetUser()
             {
