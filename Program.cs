@@ -15,7 +15,11 @@ namespace Number_app
             // Change text color
             Console.ForegroundColor = ConsoleColor.Green;
 
+
+            // Write app info
             Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
+
+            Console.ResetColor();
         }
     }
 }
